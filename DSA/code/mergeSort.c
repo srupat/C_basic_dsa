@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void printArray(int *A, int n)
 {
@@ -56,8 +57,15 @@ void mergeSort(int A[], int low, int high)
 }
 int main()
 {
-    int A[] = {23, 3, 1, 87, 64, 37};
     int n = 6;
+    int * A = (int*)calloc(n, sizeof(int));
+    printf("Enter the elements of array\n");
+    
+    for(int i =0;i<n;i++) 
+    {
+        printf("Enter element %d ", i);
+        scanf("%d", &A[i]);
+    }
     printArray(A,n);
     mergeSort(A,0,5);
     printArray(A,n);

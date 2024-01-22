@@ -63,6 +63,8 @@ int precedence(char ch)
         return 3;
     else if(ch=='+' || ch=='-')
         return 2;
+    else if(ch=='^')
+        return 3;
     else
         return 0;        
 }
@@ -119,7 +121,7 @@ char * infixtoPostfix(char* infix)
 }
 int main()
 {
-    char * infix = "x-y/z-k*d";
+    char * infix = "a+b*c/d-e^f";
     printf("postfix is %s",infixtoPostfix(infix));
     return 0;
 }

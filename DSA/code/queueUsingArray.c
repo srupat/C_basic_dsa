@@ -62,10 +62,11 @@ int main()
     enqueue(&q, 1);
     printf("dequeueing element %d\n",dequeue(&q));
     printf("dequeueing element %d\n",dequeue(&q));
-    if (isEmpty(&q)){
+    printf("dequeueing element %d\n",dequeue(&q));
+    if (isEmptyq(&q)){
         printf("Queue is empty\n");
     }
-    if (isFull(&q)){
+    if (isFullq(&q)){
         printf("Queue is full\n");
     }
     return 0;
